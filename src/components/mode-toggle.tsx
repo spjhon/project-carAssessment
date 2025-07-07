@@ -1,3 +1,7 @@
+
+/**
+ * Shadcn primitives imports
+ */
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -5,11 +9,22 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-//import { useTheme } from "@/components/theme-provider";
+
+/**
+ * Nexth themes import
+ */
+import { useTheme } from "next-themes"
+
+/**
+ * Icons import
+ */
 import { Moon, Sun } from "lucide-react";
 
+/**
+ * Toggle for dark and light themes
+ */
 export function ModeToggle() {
-  //const { setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   return (
     <DropdownMenu>
@@ -25,13 +40,13 @@ export function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => console.log("light")/*setTheme("light")*/}>
+        <DropdownMenuItem onClick={() => setTheme("light")}>
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => console.log("dark")/*setTheme("dark")*/}>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => console.log("system")/*setTheme("system")*/}>
+        <DropdownMenuItem onClick={() => setTheme("system")}>
           System
         </DropdownMenuItem>
       </DropdownMenuContent>

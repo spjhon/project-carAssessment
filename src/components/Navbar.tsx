@@ -9,6 +9,7 @@ import {
 import {
   Sheet,
   SheetContent,
+  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -16,9 +17,9 @@ import {
 
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
-import { Menu } from "lucide-react";
+import { Menu, Apple } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import { Apple } from "lucide-react";
+import Link from "next/link";
 
 interface RouteProps {
   href: string;
@@ -47,19 +48,18 @@ const routeList: RouteProps[] = [
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
-            <a
+            <Link
               rel="noreferrer noopener"
               href="/"
               className="ml-2 font-bold text-xl flex"
             >
               <Apple />
               ShadcnUI/React
-            </a>
+            </Link>
           </NavigationMenuItem>
 
           {/* mobile */}
@@ -71,12 +71,7 @@ export const Navbar = () => {
               onOpenChange={setIsOpen}
             >
               <SheetTrigger className="px-2">
-                <Menu
-                  className="flex md:hidden h-5 w-5"
-                  onClick={() => setIsOpen(true)}
-                >
-                  
-                </Menu>
+                <Menu className="flex h-5 w-5"onClick={() => setIsOpen(true)}></Menu>
               </SheetTrigger>
 
               <SheetContent side={"left"}>
@@ -109,14 +104,18 @@ export const Navbar = () => {
                     Github
                   </a>
                 </nav>
+                <SheetFooter>
+                Este es el footer
+              </SheetFooter>
               </SheetContent>
+              
             </Sheet>
           </span>
 
           {/* desktop */}
           <nav className="hidden md:flex gap-2">
             {routeList.map((route: RouteProps, i) => (
-              <a
+              <Link
                 rel="noreferrer noopener"
                 href={route.href}
                 key={i}
@@ -125,7 +124,7 @@ export const Navbar = () => {
                 })}`}
               >
                 {route.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
