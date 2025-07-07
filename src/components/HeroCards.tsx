@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/card";
 import { Check, Linkedin, Lightbulb } from "lucide-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import Image from "next/image";
 
 export const HeroCards = () => {
   return (
