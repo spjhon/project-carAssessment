@@ -42,7 +42,9 @@ export default function RootLayout({
 
           <div className="h-screen max-w-[2592px] max-h-[1750px] m-auto">
             <Navbar />
+            
             {children}
+            
           </div>
 
         </ThemeProvider>
