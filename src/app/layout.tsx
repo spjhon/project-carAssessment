@@ -40,7 +40,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
 
-          <div className="h-screen max-w-[2592px] max-h-[1750px] m-auto">
+          <div className="max-w-[2592px] max-h-[1750px] m-auto border-2 border-amber-400">
             <Navbar />
             
             {children}
