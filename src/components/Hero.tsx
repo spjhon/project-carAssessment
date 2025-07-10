@@ -6,7 +6,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 export const Hero = () => {
   return (
     <section className="
-      container 
+      
       flex items-center flex-row
       py-20
       m-auto
@@ -15,7 +15,7 @@ export const Hero = () => {
 
       <div className="
         text-center md:text-start space-y-6 
-        border-2 border-blue-300 h-full
+        border-2 border-blue-300
         w-[50%]
         px-20">
 

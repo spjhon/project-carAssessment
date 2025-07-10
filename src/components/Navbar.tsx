@@ -51,18 +51,13 @@ export const Navbar = () => {
     <header className="
       sticky 
       border-b-[1px] 
-      z-40 
-      w-full bg-white dark:border-b-slate-700 dark:bg-background">
-      <NavigationMenu className="
-        mx-auto
-        flex justify-between ">
-        <NavigationMenuList className="
-          h-14 px-4
-          flex justify-between ">
+      z-40
+     bg-white dark:border-b-slate-700 dark:bg-background">
+      <NavigationMenu className="mx-auto">
+        <NavigationMenuList className="h-14 px-4">
 
           <NavigationMenuItem className="
-            font-bold 
-            flex justify-between">
+            font-bold">
             <Link
               rel="noreferrer noopener"
               href="/"

@@ -22,7 +22,6 @@ function NavigationMenu({
         className
       )}
       {...props}
-      
     >
       {children}
       {viewport && <NavigationMenuViewport />}
