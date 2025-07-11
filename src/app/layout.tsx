@@ -39,12 +39,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-
-          <div className="max-w-[1536] m-auto border-2 border-amber-400">
-            <Navbar />
-            
+          <Navbar />
+          <div className="container m-auto">
             {children}
-            
           </div>
 
         </ThemeProvider>
