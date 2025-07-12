@@ -9,7 +9,7 @@ export function OurProcess() {
   ));
 
   return (
-    <div className="w-full h-full py-20">
+    <div className="container w-full h-full my-30">
       <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
         Get to know your iSad.
       </h2>

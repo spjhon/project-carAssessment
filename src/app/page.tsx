@@ -1,19 +1,30 @@
 import { BrandMarquee } from '@/components/BrandMarquee';
 import { Hero } from '../components/Hero';
 import { HeroVideo } from '@/components/HeroVideo';
-import { Problem } from '@/components/Problem';
 import { Benefits } from '@/components/Benefits';
 import { OurProcess } from '@/components/OurProcess';
+import { InfraestructureBanner } from '@/components/InfraestructureBanner';
+import { Pricing } from '@/components/Pricing';
+import { CallToAction } from '@/components/CallToAction';
+import { FAQ } from '../components/FaQ';
+import { Footer } from '@/components/Footer';
+import { Ubicacion } from '@/components/Ubicacion';
 
 export default function Home() {
   return (
     <>
      <Hero></Hero>
-     <BrandMarquee></BrandMarquee>
-     <Problem></Problem>
      <HeroVideo></HeroVideo>
-    <Benefits></Benefits>
-    <OurProcess></OurProcess>
+     <Benefits></Benefits>
+     <InfraestructureBanner></InfraestructureBanner>
+     <OurProcess></OurProcess>
+     <Pricing></Pricing>
+     <BrandMarquee></BrandMarquee>
+     <CallToAction></CallToAction>
+     <FAQ></FAQ>
+     <Footer></Footer>
+
+     <Ubicacion></Ubicacion>
     </>
   );
 }
