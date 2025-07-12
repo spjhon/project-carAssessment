@@ -1,6 +1,12 @@
 "use client"
 
+//Importacion de link de next
+import Link from "next/link";
+
+//Importacion de los states
 import { useState } from "react";
+
+//Importacion de los componentes de shadcn
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -9,18 +15,20 @@ import {
 import {
   Sheet,
   SheetContent,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+//Importacion de iconos de radix y lucide
 import { buttonVariants } from "./ui/button";
-import { Menu, Apple } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
-import Link from "next/link";
+import { Menu, CarFront } from "lucide-react";
 
+//Importacion de custom component para el toggle
+import { ModeToggle } from "./mode-toggle";
+import WassapLogo from "../../public/WassapLogo";
+
+//Props para la barra de navegacion
 interface RouteProps {
   href: string;
   label: string;
@@ -28,20 +36,20 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#features",
-    label: "Features",
-  },
-  {
-    href: "#testimonials",
-    label: "Testimonials",
+    href: "#OurWork",
+    label: "Nuestro Trabajo",
   },
   {
     href: "#pricing",
-    label: "Pricing",
+    label: "Servicios y Precios",
   },
   {
     href: "#faq",
     label: "FAQ",
+  },
+  {
+    href: "#contact",
+    label: "Contacto",
   },
 ];
 
@@ -59,13 +67,13 @@ export const Navbar = () => {
               href="/"
               className="ml-2 font-bold text-xl flex"
             >
-              <Apple />
-              ShadcnUI/React
+              <CarFront />
+              JAN AUTOS - Peritajes y Asesorias
             </Link>
           </NavigationMenuItem>
 
           {/* mobile */}
-          <span className="flex md:hidden">
+          <span className="flex xl:hidden">
             <ModeToggle />
 
             <Sheet
@@ -79,10 +87,11 @@ export const Navbar = () => {
               <SheetContent side={"left"}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl">
-                    Shadcn/React
+                    Jan Autos - Peritajes y Asesorias
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
+
                   {routeList.map(({ href, label }: RouteProps) => (
                     <a
                       rel="noreferrer noopener"
@@ -94,28 +103,31 @@ export const Navbar = () => {
                       {label}
                     </a>
                   ))}
+
                   <a
                     rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+                    href="https://wa.me/573215224583"
                     target="_blank"
-                    className={`w-[110px] border ${buttonVariants({
-                      variant: "secondary",
-                    })}`}
+                    className={`w-50 border ${buttonVariants({ variant: "secondary" })} flex items-center justify-center h-5 gap-2`}
+                    aria-label="Contactar por WhatsApp"
                   >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                    Github
+                    <WassapLogo />
+                    <span className="text-sm">+57 321 522 45 83</span>
                   </a>
+
+                  <address className="h-7 flex items-center justify-center not-italic text-sm text-center">
+                    Carrera 25 #17-66 Manizales, Colombia
+                  </address>
+
                 </nav>
-                <SheetFooter>
-                Este es el footer
-              </SheetFooter>
+                
               </SheetContent>
               
             </Sheet>
           </span>
 
           {/* desktop */}
-          <nav className="hidden md:flex gap-2">
+          <nav className="hidden xl:flex gap-2">
             {routeList.map((route: RouteProps, i) => (
               <Link
                 rel="noreferrer noopener"
@@ -130,18 +142,20 @@ export const Navbar = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex gap-2">
+          <div className="hidden xl:flex gap-2">
             <a
               rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+              href="https://wa.me/573215224583"
               target="_blank"
-              className={`border ${buttonVariants({ variant: "secondary" })}`}
+              className={`border ${buttonVariants({ variant: "secondary" })} flex items-center justify-center h-5 gap-2`}
+              aria-label="Contactar por WhatsApp"
             >
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
-              Github
+              <WassapLogo />
+              <span className="text-sm">+57 321 522 45 83</span>
             </a>
 
             <ModeToggle />
+
           </div>
         </NavigationMenuList>
       </NavigationMenu>

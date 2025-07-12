@@ -40,7 +40,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <div className="container m-auto">
+          <div className="container px-20 m-auto">
             {children}
           </div>
 

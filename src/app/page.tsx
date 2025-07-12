@@ -8,7 +8,7 @@ import { Pricing } from '@/components/Pricing';
 import { CallToAction } from '@/components/CallToAction';
 import { FAQ } from '../components/FaQ';
 import { Footer } from '@/components/Footer';
-import { Ubicacion } from '@/components/Ubicacion';
+import ContactUs from '@/components/ContactUs';
 
 export default function Home() {
   return (
@@ -22,9 +22,8 @@ export default function Home() {
      <BrandMarquee></BrandMarquee>
      <CallToAction></CallToAction>
      <FAQ></FAQ>
+     <ContactUs></ContactUs>
      <Footer></Footer>
-
-     <Ubicacion></Ubicacion>
     </>
   );
 }
