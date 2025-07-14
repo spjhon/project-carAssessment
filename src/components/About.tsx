@@ -1,11 +1,11 @@
 import { Statistics } from "./Statistics";
-import pilot from "../../public/about.jpg";
+import pilot from "../../public/about.webp";
 
 export const About = () => {
   return (
     <section
       id="about"
-      className="container my-60"
+      className="container my-60 shadow-2xl"
     >
       <div className="bg-muted/50 border rounded-lg py-12">
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">

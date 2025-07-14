@@ -11,14 +11,14 @@ import {
 import { Linkedin} from "lucide-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
-import HorizontalScanner from "../../public/horizontalScanner.jpg";
-import VerticalImage from "../../public/verticalCar.jpg";
+import HorizontalScanner from "../../public/horizontalScanner.webp";
+import VerticalImage from "../../public/verticalCar.webp";
 
 export const HeroCards = () => {
   return (
     <div className="hidden xl:flex flex-row flex-wrap gap-30 relative w-[700px] h-[500px]">
       {/* Testimonial */}
-      <Card className="absolute w-[340px] -top-[30px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute w-[340px] -top-[30px] drop-shadow-2xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
             <AvatarImage
@@ -38,7 +38,7 @@ export const HeroCards = () => {
       </Card>
 
       {/* Team */}
-      <Card className="absolute right-[20px] top-10 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute right-[20px] top-10 w-80 flex flex-col justify-center items-center drop-shadow-2xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2 w-60">
           <img
             src="https://i.pravatar.cc/150?img=58"
@@ -114,7 +114,7 @@ export const HeroCards = () => {
       alt="Front Car"
       width={265}
       height={150}
-      className="absolute top-[165px] left-[75px] rounded-xl border shadow-sm  drop-shadow-xl shadow-black/10 dark:shadow-white/10"
+      className="absolute top-[165px] left-[75px] rounded-xl border shadow-2xl  drop-shadow-xl shadow-black/10 dark:shadow-white/10"
       
       >
         </Image>
@@ -126,7 +126,7 @@ export const HeroCards = () => {
       alt="Scanner"
       width={350}
       height={150}
-      className="absolute -right-[10px] -bottom-[35px] rounded-xl border shadow-sm  drop-shadow-xl shadow-black/10 dark:shadow-white/10"
+      className="absolute -right-[10px] -bottom-[35px] rounded-xl border shadow-2xl  drop-shadow-xl shadow-black/10 dark:shadow-white/10"
       
       >
         </Image>

@@ -48,7 +48,7 @@ export const FAQ = () => {
   return (
     <section
       id="faq"
-      className="container my-60"
+      className="container my-60 "
     >
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
         Preguntas{" "}

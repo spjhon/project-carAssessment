@@ -12,7 +12,7 @@ export const Hero = () => {
 
           <h1 className="inline">
              Tu {" "}
-            <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
+            <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#FF6500] text-transparent bg-clip-text">
               SEGURIDAD
             </span>{" "}
             empieza antes de arrancar.
@@ -43,17 +43,17 @@ export const Hero = () => {
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
 
-          <Button className="w-full md:w-1/3">
+          <Button className=" w-full md:w-1/3 shadow-2xl">
 
             <a
               rel="noreferrer noopener"
               href="https://wa.me/573215224583"
               target="_blank"
-              className={`w-full flex items-center justify-center h-5 gap-2`}
+              className={`w-full flex items-center justify-center h-5 gap-2 shadow-2xl`}
               aria-label="Contactar por WhatsApp"
             >
               <WassapLogo />
-              <span className="text-sm">Reserva tu cita ahora</span>
+              <span className="text-sm text-bold">Reserva tu cita ahora</span>
             </a>
           </Button>
           

@@ -50,7 +50,7 @@ export const InfraestructureBanner = () => {
         {features.map(({ icon, title, description, url }: FeatureProps) => (
           <Card
             key={title}
-            className="bg-muted/50 w-[30rem]"
+            className="bg-muted/50 w-[30rem] shadow-2xl"
           >
             <CardHeader>
               <CardTitle className="grid gap-4 place-items-center">
