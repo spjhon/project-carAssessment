@@ -2,7 +2,7 @@ import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
  
 export function HeroVideo() {
   return (
-    <section className="container mx-auto relative w-200 mb-30 mt-50 text-center">
+    <section className="container mx-auto relative max-w-200 mb-30 mt-50 text-center">
 
       <h2 className="pb-6 mb-6 text-3xl md:text-4xl font-bold ">
         Conoce{" "}
