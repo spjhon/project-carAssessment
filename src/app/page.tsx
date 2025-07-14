@@ -10,17 +10,19 @@ import { FAQ } from '../components/FaQ';
 import { Footer } from '@/components/Footer';
 import ContactUs from '@/components/ContactUs';
 import { About } from '@/components/About';
+import { Testimonials } from '../components/Testimonials';
 
 export default function Home() {
   return (
     <>
      <Hero></Hero>
-     <About></About>
      <HeroVideo></HeroVideo>
+     <About></About>
      <Benefits></Benefits>
      <InfraestructureBanner></InfraestructureBanner>
      <OurProcess></OurProcess>
      <Pricing></Pricing>
+     <Testimonials></Testimonials>
      <BrandMarquee></BrandMarquee>
      <CallToAction></CallToAction>
      <FAQ></FAQ>

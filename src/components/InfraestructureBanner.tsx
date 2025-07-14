@@ -43,15 +43,14 @@ export const InfraestructureBanner = () => {
         Para ti y tu vehiculo
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+        Con Jan Autos vas a tener las mejores instalaciones para tu vehiculo y una comoda sala de espera con cafe, aromatica y TV.
       </p>
 
-      <div className="grid grid-cols-1 place-items-center md:grid-cols-2">
+      <div className="bg-green-0 flex flex-wrap justify-center gap-10">
         {features.map(({ icon, title, description, url }: FeatureProps) => (
           <Card
             key={title}
-            className="bg-muted/50 w-[50%]"
+            className="bg-muted/50 w-[30rem]"
           >
             <CardHeader>
               <CardTitle className="grid gap-4 place-items-center">

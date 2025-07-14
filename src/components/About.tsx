@@ -12,7 +12,7 @@ export const About = () => {
           <img
             src={pilot.src}
             alt=""
-            className="w-[300px] object-contain rounded-lg"
+            className="max-w-[300px] object-contain rounded-lg mx-auto"
           />
           <div className="bg-green-0 flex flex-col justify-between">
             <div className="pb-6">
@@ -23,11 +23,16 @@ export const About = () => {
                 Nuestra Empresa
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
+                Hace cuatro años, cuatro profesionales provenientes de distintas disciplinas decidimos unir experiencia y propósito para dar vida a una empresa de peritajes caracterizada por su rigor técnico y compromiso humano. Nacimos con la convicción de ofrecer soluciones confiables en un sector que demanda objetividad, transparencia y sensibilidad ante cada caso.
+              </p>
+              <p className="text-xl text-muted-foreground mt-4">
+                El camino no ha sido sencillo. Afrontamos desafíos propios de todo emprendimiento: construir credibilidad, ganarnos la confianza del mercado y demostrar, con trabajo serio, la solidez de nuestro criterio. Cada obstáculo nos fortaleció y reafirmó nuestro compromiso de ejercer esta labor con responsabilidad y excelencia.
+              </p>
+              <p className="text-xl text-muted-foreground mt-4">
+                Hoy, nuestra trayectoria nos permite contar con un equipo técnico calificado, recursos de última generación y una reputación basada en resultados, ética profesional y cercanía con nuestros clientes. Hemos intervenido en múltiples procesos judiciales, administrativos y privados, aportando claridad y respaldo en momentos decisivos.
+              </p>
+              <p className="text-xl text-muted-foreground mt-4">
+                Seguimos trabajando con la misma convicción del primer día: brindar peritajes responsables, oportunos y confiables, entendiendo que detrás de cada informe hay personas, intereses y decisiones que merecen respeto y total transparencia.
               </p>
             </div>
 
