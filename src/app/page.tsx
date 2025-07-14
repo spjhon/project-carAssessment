@@ -9,11 +9,13 @@ import { CallToAction } from '@/components/CallToAction';
 import { FAQ } from '../components/FaQ';
 import { Footer } from '@/components/Footer';
 import ContactUs from '@/components/ContactUs';
+import { About } from '@/components/About';
 
 export default function Home() {
   return (
     <>
      <Hero></Hero>
+     <About></About>
      <HeroVideo></HeroVideo>
      <Benefits></Benefits>
      <InfraestructureBanner></InfraestructureBanner>

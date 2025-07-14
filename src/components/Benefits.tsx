@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
-import { CarFront, Settings } from "lucide-react";
+import { CarFront} from "lucide-react";
 
 
 interface FeatureProps {
@@ -13,25 +13,25 @@ interface FeatureProps {
 const features: FeatureProps[] = [
   {
     icon: <CarFront />,
-    title: "Accessibility",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
-  },
-  {
-    icon: <Settings />,
-    title: "Community",
+    title: "Beneficio 01",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
   },
   {
     icon: <CarFront />,
-    title: "Scalability",
+    title: "Beneficio 02",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
   },
   {
     icon: <CarFront />,
-    title: "Gamification",
+    title: "Beneficio 03",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+  },
+  {
+    icon: <CarFront />,
+    title: "Beneficio 04",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
   },
@@ -41,14 +41,14 @@ export const Benefits = () => {
   return (
     <section
       id="Benefits"
-      className="container text-center py-24 sm:py-32"
+      className="container text-center my-60"
     >
       <h2 className="text-3xl md:text-4xl font-bold ">
         Los{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           Beneficios{" "}
         </span>
-        de un buen peritaje, un vistazo a nuestro proceso
+        de un buen peritaje.
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis

@@ -9,22 +9,24 @@ export function OurProcess() {
   ));
 
   return (
-    <div className="container w-full h-full my-30" id="OurWork">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-        Get to know your iSad.
+    <section className="container w-full h-full my-60" id="OurWork">
+      <h2 className="text-3xl text-center md:text-4xl font-bold ">
+        Un vistazo a nuestro{" "}
+        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+          PROCESO{" "}
+        </span>
+        
       </h2>
       <Carousel items={cards} />
-    </div>
+    </section>
   );
 }
 
 const DummyContent = () => {
   return (
     <>
-      {[...new Array(3).fill(1)].map((_, index) => {
-        return (
-          <div
-            key={"dummy-content" + index}
+      <div
+            
             
             className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
           >
@@ -45,8 +47,6 @@ const DummyContent = () => {
               className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
             />
           </div>
-        );
-      })}
     </>
   );
 };

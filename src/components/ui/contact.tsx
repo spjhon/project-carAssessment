@@ -43,9 +43,9 @@ export function ContactSection({
       </div>
 
       {/* Información */}
-      <div className="flex flex-col md:flex-row gap-6 p-4 bg-background rounded-2xl shadow-lg border">
+      <div className="flex flex-col md:flex-row gap-6 p-4 bg-card rounded-2xl shadow-lg border">
         {/* Info de contacto */}
-        <div className="flex-1 flex flex-col justify-center gap-6">
+        <div className="flex flex-col justify-center gap-6">
           <h2 className="text-3xl font-bold text-primary">{title}</h2>
           <ul className="space-y-4">
             {contactItems.map((item, index) => (
@@ -61,7 +61,7 @@ export function ContactSection({
         </div>
 
         {/* WhatsApp */}
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center mx-auto">
           {whatsappIcon}
         </div>
       </div>

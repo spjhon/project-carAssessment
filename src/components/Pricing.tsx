@@ -26,12 +26,12 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "Free",
+    title: "Basico",
     popular: 0,
     price: 0,
     description:
       "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get Started",
+    buttonText: "Reseva Tu Peritaje Ahora",
     benefitList: [
       "1 Team member",
       "2 GB Storage",
@@ -46,7 +46,7 @@ const pricingList: PricingProps[] = [
     price: 5,
     description:
       "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+    buttonText: "Reserva Tu Peritaje Ahora",
     benefitList: [
       "4 Team member",
       "4 GB Storage",
@@ -56,12 +56,12 @@ const pricingList: PricingProps[] = [
     ],
   },
   {
-    title: "Enterprise",
+    title: "Asesoramiento Automotriz",
     popular: 0,
     price: 40,
     description:
       "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+    buttonText: "Reserva Tu Cita Ahora",
     benefitList: [
       "10 Team member",
       "8 GB Storage",
@@ -76,15 +76,19 @@ export const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="container py-24 sm:py-32"
+      className="container my-60"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Get
+        Nuestros
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
-          Unlimited{" "}
+          Servicios{" "}
         </span>
-        Access
+        y{" "}
+        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+          {" "}
+          Precios{" "}
+        </span>
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
@@ -108,13 +112,13 @@ export const Pricing = () => {
                     variant="secondary"
                     className="text-sm text-primary"
                   >
-                    Most popular
+                    Mas Popular
                   </Badge>
                 ) : null}
               </CardTitle>
               <div>
                 <span className="text-3xl font-bold">${pricing.price}</span>
-                <span className="text-muted-foreground"> /month</span>
+                <span className="text-muted-foreground"> /por servicio</span>
               </div>
 
               <CardDescription>{pricing.description}</CardDescription>

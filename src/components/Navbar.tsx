@@ -9,7 +9,7 @@ import { useState } from "react";
 //Importacion de los componentes de shadcn
 import {
   NavigationMenu,
-  NavigationMenuItem,
+ 
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import {
@@ -56,93 +56,93 @@ const routeList: RouteProps[] = [
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
-      <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between">
+    <header className="sticky border-b-[1px] top-0 z-40 bg-white dark:border-b-slate-700 dark:bg-background">
+      <div className="container flex flex-row justify-between items-center mx-auto px-5">
 
-          <NavigationMenuItem className="
-            font-bold">
-            <Link
-              rel="noreferrer noopener"
-              href="/"
-              className="ml-2 font-bold text-xl flex"
-            >
-              <CarFront />
-              JAN AUTOS - Peritajes y Asesorias
-            </Link>
-          </NavigationMenuItem>
+        <Link
+          rel="noreferrer noopener"
+          href="/"
+          className="ml-2 font-bold text-xl flex"
+        >
+          <CarFront />
+          JAN AUTOS - Peritajes y Asesorias
+        </Link>
 
-          {/* mobile */}
-          <span className="flex xl:hidden">
-            <ModeToggle />
+        <NavigationMenu className="mx-auto">
+          <NavigationMenuList className="h-14">
+            {/* desktop */}
+            <nav className="hidden xl:flex gap-2">
+              {routeList.map((route: RouteProps, i) => (
+                <Link
+                  rel="noreferrer noopener"
+                  href={route.href}
+                  key={i}
+                  className={`text-[17px] ${buttonVariants({
+                    variant: "ghost",
+                  })}`}
+                >
+                  {route.label}
+                </Link>
+              ))}
+            </nav>
+          </NavigationMenuList>
+        </NavigationMenu>
 
-            <Sheet
-              open={isOpen}
-              onOpenChange={setIsOpen}
-            >
-              <SheetTrigger className="px-2">
-                <Menu className="flex h-5 w-5"onClick={() => setIsOpen(true)}></Menu>
-              </SheetTrigger>
+        {/* mobile */}
+        <span className="flex xl:hidden">
+          <ModeToggle />
 
-              <SheetContent side={"left"}>
-                <SheetHeader>
-                  <SheetTitle className="font-bold text-xl">
-                    Jan Autos - Peritajes y Asesorias
-                  </SheetTitle>
-                </SheetHeader>
-                <nav className="flex flex-col justify-center items-center gap-2 mt-4">
+          <Sheet
+            open={isOpen}
+            onOpenChange={setIsOpen}
+          >
+            <SheetTrigger className="px-2">
+              <Menu className="flex h-5 w-5"onClick={() => setIsOpen(true)}></Menu>
+            </SheetTrigger>
 
-                  {routeList.map(({ href, label }: RouteProps) => (
-                    <a
-                      rel="noreferrer noopener"
-                      key={label}
-                      href={href}
-                      onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: "ghost" })}
-                    >
-                      {label}
-                    </a>
-                  ))}
+            <SheetContent side={"left"}>
+              <SheetHeader>
+                <SheetTitle className="font-bold text-xl">
+                  Jan Autos - Peritajes y Asesorias
+                </SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col justify-center items-center gap-2 mt-4">
 
+                {routeList.map(({ href, label }: RouteProps) => (
                   <a
                     rel="noreferrer noopener"
-                    href="https://wa.me/573215224583"
-                    target="_blank"
-                    className={`w-50 border ${buttonVariants({ variant: "secondary" })} flex items-center justify-center h-5 gap-2`}
-                    aria-label="Contactar por WhatsApp"
+                    key={label}
+                    href={href}
+                    onClick={() => setIsOpen(false)}
+                    className={buttonVariants({ variant: "ghost" })}
                   >
-                    <WassapLogo />
-                    <span className="text-sm">+57 321 522 45 83</span>
+                    {label}
                   </a>
+                ))}
 
-                  <address className="h-7 flex items-center justify-center not-italic text-sm text-center">
-                    Carrera 25 #17-66 Manizales, Colombia
-                  </address>
+                <a
+                  rel="noreferrer noopener"
+                  href="https://wa.me/573215224583"
+                  target="_blank"
+                  className={`w-50 border ${buttonVariants({ variant: "secondary" })} flex items-center justify-center h-5 gap-2`}
+                  aria-label="Contactar por WhatsApp"
+                >
+                  <WassapLogo />
+                  <span className="text-sm">+57 321 522 45 83</span>
+                </a>
 
-                </nav>
-                
-              </SheetContent>
+                <address className="h-7 flex items-center justify-center not-italic text-sm text-center">
+                  Carrera 25 #17-66 Manizales, Colombia
+                </address>
+
+              </nav>
               
-            </Sheet>
-          </span>
-
-          {/* desktop */}
-          <nav className="hidden xl:flex gap-2">
-            {routeList.map((route: RouteProps, i) => (
-              <Link
-                rel="noreferrer noopener"
-                href={route.href}
-                key={i}
-                className={`text-[17px] ${buttonVariants({
-                  variant: "ghost",
-                })}`}
-              >
-                {route.label}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="hidden xl:flex gap-2">
+            </SheetContent>
+            
+          </Sheet>
+        </span>
+            
+        <div className="hidden xl:flex gap-2">
             <a
               rel="noreferrer noopener"
               href="https://wa.me/573215224583"
@@ -156,9 +156,10 @@ export const Navbar = () => {
 
             <ModeToggle />
 
-          </div>
-        </NavigationMenuList>
-      </NavigationMenu>
+        </div>
+
+
+      </div>
     </header>
   );
 };

@@ -26,7 +26,7 @@ export const Cta4 = ({
   items = defaultItems,
 }: Cta4Props) => {
   return (
-    <section className="py-32">
+    <section className="my-60">
       <div className="container mx-auto">
         <div className="flex justify-center">
           <div className="max-w-5xl">
